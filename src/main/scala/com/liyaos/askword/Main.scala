@@ -5,6 +5,6 @@ package com.liyaos.askword
  */
 object Main {
   def main(args: Array[String]) {
-    RandomPrompt.askWords(WordList.fromList(1), 10)
+    RandomPromptWithMemory.askWords(WordList.fromListRange(1 to 2), 100)
   }
 }

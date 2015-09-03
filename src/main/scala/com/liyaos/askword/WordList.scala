@@ -9,6 +9,8 @@ object WordList {
   val unitsInList = 10
   val filePrefix = System.getProperty("user.dir") + "/src/main/resources/"
 
+  def fromWordList(list: List[Word]): Seq[Word] = list
+
   def fromListUnit(list: Int, unit: Int): Seq[Word] = {
     val fileName = filePrefix + list + "-" + unit
     Source.fromFile(fileName).getLines().map(Word(_, list, unit)).toList
